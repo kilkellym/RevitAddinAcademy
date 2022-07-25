@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="cmdDeleteBackups.cs" />
+    <Compile Include="cmdDeleteUnusedViews.cs" />
     <Compile Include="cmdSession01Challenge.cs" />
     <Compile Include="cmdProjectSetup.cs" />
     <Compile Include="CmdWallsFromLines.cs" />
