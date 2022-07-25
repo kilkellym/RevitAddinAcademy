@@ -62,6 +62,7 @@
     <Compile Include="cmdSession01Challenge.cs" />
     <Compile Include="cmdProjectSetup.cs" />
     <Compile Include="CmdWallsFromLines.cs" />
+    <Compile Include="cmdElementsFromLines.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="FrmWallsFromLines.cs">
       <SubType>Form</SubType>
