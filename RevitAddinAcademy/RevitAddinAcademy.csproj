@@ -70,6 +70,7 @@
     <Compile Include="FrmWallsFromLines.Designer.cs">
       <DependentUpon>FrmWallsFromLines.cs</DependentUpon>
     </Compile>
+    <Compile Include="myClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
