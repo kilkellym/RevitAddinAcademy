@@ -63,6 +63,7 @@
     <Compile Include="cmdProjectSetup.cs" />
     <Compile Include="CmdWallsFromLines.cs" />
     <Compile Include="cmdElementsFromLines.cs" />
+    <Compile Include="CmdInsertFurniture.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="FrmWallsFromLines.cs">
       <SubType>Form</SubType>
@@ -70,6 +71,7 @@
     <Compile Include="FrmWallsFromLines.Designer.cs">
       <DependentUpon>FrmWallsFromLines.cs</DependentUpon>
     </Compile>
+    <Compile Include="FurnitureData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
