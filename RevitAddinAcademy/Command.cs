@@ -29,6 +29,9 @@ namespace RevitAddinAcademy
             TaskDialog.Show("Hello again", "This is another window");
             TaskDialog.Show("Hello again again", "This is yet another window");
             TaskDialog.Show("Hello again again again", "this is the third window");
+
+            Utils.method1();
+
             return Result.Succeeded;
         }
     }
