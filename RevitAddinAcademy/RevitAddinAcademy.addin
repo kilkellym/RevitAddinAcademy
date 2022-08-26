@@ -81,6 +81,16 @@
     <VendorId>com.typepad.thebuildingcoder</VendorId>
     <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
   </AddIn>
+  <AddIn Type="Command">
+    <Text>Load Family</Text>
+    <Description>Some description for RevitAddinAcademy</Description>
+    <Assembly>RevitAddinAcademy.dll</Assembly>
+    <FullClassName>RevitAddinAcademy.CmdLoadFamily</FullClassName>
+    <ClientId>4FADCB08-6510-41CE-89D8-C5055DC704C7</ClientId>
+    <VendorId>com.typepad.thebuildingcoder</VendorId>
+    <VendorDescription>The Building Coder, http://thebuildingcoder.typepad.com</VendorDescription>
+  </AddIn>
+  
   <AddIn Type="Application">
     <Name>Application RevitAddinAcademy</Name>
     <Assembly>RevitAddinAcademy.dll</Assembly>
