@@ -99,6 +99,8 @@ namespace RevitAddinAcademy
             ElementType newFS = curFS.Duplicate(famSymbolName);
 
             TaskDialog.Show("Test", "Created family symbol: " + famSymbolName);
+
+            SetParameterValue(newFS, "Width", 8);
         }
 
         internal bool DoesFamilySymbolExist(Document doc, Family curFam, string famSymbolName)
@@ -174,6 +176,31 @@ namespace RevitAddinAcademy
             }
 
             return returnList;
+        }
+
+        public static bool SetParameterValue(Element curElem, string paramName, double value)
+        {
+            Parameter curParam = GetParameterByName(curElem, paramName);
+
+            if (curParam != null)
+            {
+                curParam.Set(value);
+                return true;
+            }
+
+            return false;
+
+        }
+
+        public static Parameter GetParameterByName(Element curElem, string paramName)
+        {
+            foreach (Parameter curParam in curElem.Parameters)
+            {
+                if (curParam.Definition.Name.ToString() == paramName)
+                    return curParam;
+            }
+
+            return null;
         }
     }
 }
