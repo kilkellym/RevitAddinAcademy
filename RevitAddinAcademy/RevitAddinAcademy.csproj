@@ -65,6 +65,7 @@
     <Compile Include="cmdElementsFromLines.cs" />
     <Compile Include="CmdInsertFurniture.cs" />
     <Compile Include="CmdLoadFamily.cs" />
+    <Compile Include="CmdAddLegend.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="FrmWallsFromLines.cs">
       <SubType>Form</SubType>
