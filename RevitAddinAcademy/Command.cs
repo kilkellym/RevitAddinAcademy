@@ -7,6 +7,7 @@ using Autodesk.Revit.UI.Selection;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 
 #endregion
 
@@ -25,10 +26,44 @@ namespace RevitAddinAcademy
             Application app = uiapp.Application;
             Document doc = uidoc.Document;
 
-            TaskDialog.Show("Hello", "This is my first command add-in. I just modified it.");
-            TaskDialog.Show("Hello again", "This is another window");
-            TaskDialog.Show("Hello again again", "This is yet another window");
-            TaskDialog.Show("Hello again again again", "this is the third window");
+            string modelPath = doc.PathName;
+            string fileName = Path.GetFileName(modelPath);
+            string fileName2 = Path.GetFileNameWithoutExtension(fileName);
+            string folderPath = Path.GetDirectoryName(modelPath);
+            string txtFile = folderPath + "\\" + fileName2 + ".txt";
+
+            List<string> stringList = new List<string>();
+            stringList.Add("line 1");
+            stringList.Add("line 2");
+            stringList.Add("line 3");
+
+            using (StreamWriter writer = File.CreateText(txtFile))
+            {
+                foreach (string curLine in stringList)
+                {
+                    writer.WriteLine(curLine);
+
+                }
+            }
+
+            if (File.Exists(txtFile))
+            {
+                string[] textFile = File.ReadAllLines(txtFile);
+
+                foreach(string text in textFile)
+                {
+                    Debug.Print(text);
+                }
+
+            }
+
+            FrmTestForm form1 = new FrmTestForm(txtFile);
+            form1.ShowDialog();
+
+            TestData test1 = new TestData("this is a string", "this is another string", 10);
+
+            TaskDialog.Show("test", test1.Combo);
+
             return Result.Succeeded;
         }
     }
