@@ -32,9 +32,10 @@ namespace RevitAddinAcademy
 
             FolderBrowserDialog selectFolder = new FolderBrowserDialog();
             selectFolder.ShowNewFolderButton = false;
+            selectFolder.RootFolder = Environment.SpecialFolder.MyComputer;
 
             // open folder dialog and only run code if a folder is selected
-            if(selectFolder.ShowDialog() == DialogResult.OK)
+            if (selectFolder.ShowDialog() == DialogResult.OK)
             {
                 // get the selected folder path
                 string directory = selectFolder.SelectedPath;
